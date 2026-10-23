@@ -39,10 +39,15 @@ Las tablas cruzadas muestran los conteos y porcentajes por grupo. El segmento de
 
 **Hallazgos de calidad de datos documentados**
 
-- En users, city tenía 469 valores nulos (11,73 %) y 96 registros con ? (2,4 % de 4.000 usuarios).
-- En users, age contenía 55 valores centinela -999 (1,375 %).
-- Se encontraron 40 fechas de registro de 2026 (1 %), marcadas como ausentes por estar fuera del periodo de análisis.
-- En usage, faltaba date en 50 de 40.000 registros (0,125 %). Había 22.076 valores ausentes en duration (55,19 %) y 17.896 en length (44,74 %); deben interpretarse considerando el tipo de interacción y si la variable aplica.
+-En users, la columna city presenta 565 valores nulos (14,12 % de los 4.000 usuarios). Además, se identificaron 96 registros con el valor ? (2,4 % de los usuarios). Estos valores de reemplazo se convierten en nulos y los registros de los usuarios se conservan.
+
+-En users, la columna age contenía 55 valores centinela (-999), equivalentes al 1,375 % de los 4.000 usuarios.
+
+-Se encontraron 40 fechas de registro correspondientes a 2026 (1 %), que se marcaron como ausentes por estar fuera del periodo de análisis.
+
+-En usage, 50 de los 40.000 registros tenían la fecha date ausente (0,125 %).
+
+-Las columnas duration y length presentaban 22.076 (55,19 %) y 17.896 (44,74 %) valores ausentes, respectivamente. Estos valores deben interpretarse según el tipo de interacción, ya que la duración corresponde a las llamadas y la longitud a los mensajes de texto.
 
 **Cómo ejecutar el notebook**
 
